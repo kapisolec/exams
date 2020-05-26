@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+     {% if  username %}
+    <p class="float-right text-black-50 ">Użytkownik: {{ username }}</p>
+    {% endif %} <br><br>
+Zarejestruj się poniżej: <br><br>
+<form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+
+
+<input type="submit" value="Przejdz Dalej"><br>
+{{ error }}
+</form>
+
+{% endblock %}

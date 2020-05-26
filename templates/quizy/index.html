@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if  username %}
+    <p class="float-right text-black-50 ">Użytkownik: {{ username }}</p>
+    {% endif %}
+<div class="container-fluid text-center"><br><br>
+  <h2>Witaj na stronie głównej!</h2> <br/>
+    <h3>Aby przejść dalej kliknij i rozwiń menu w prawym górnym rogu</h3> <br/>
+</div>
+{% endblock %}

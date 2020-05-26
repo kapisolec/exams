@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+        {% if  username %}
+    <p class="float-right text-black-50 ">Użytkownik: {{ username }}</p>
+    {% endif %} <br><br>
+Zaloguj się poniżej: <br><br>
+<form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+
+
+ <a href ="/test/{{ pytania.id }}/"><input type="submit" value="Zaloguj"></a>
+{{ error }}
+</form>
+
+{% endblock %}

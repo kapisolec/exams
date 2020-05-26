@@ -1,0 +1,33 @@
+{# Tu musi być formularz który pozwala wybrać odpowiedź na pytanie a następnie przenosi do następnego pytania #}
+{# Odpowiedz na pytanie jest zapisane w bazie danych i polaczone jest z danym uzytkownikiem (w bazie danych trzeba zrobic albo polaczenie odpowiedzi na pytnaia LUB #}
+{# lub uzytkownik ma u siebie zapisane odpowiedzi na pytania i pozniej na samym koncu sa porownywane z tym jakie powinny byc #}
+{% extends "base.html" %}
+
+{% block content %}
+ {% if  username %}
+     <p class="float-right text-black-50 ">Użytkownik: {{ username }} </p>
+    {% endif %} <br><br>
+
+
+
+<h4>{{ pytanie }}</h4>
+    <br>
+<form method="post">
+
+
+    {% csrf_token %}
+Przepisz potencjalną odpowiedz poniżej <br>
+<br>
+    {% for sub_item in odp %}
+        <h5 class="deep-purple-text ">{{ sub_item }}</h5>
+    {% endfor %}
+    {{ form.Odpowiedz}} <br><p class="text-black-50"> UWAGA! Liczą się polskie znaki </p>
+
+{% if pytania_id == pytaniaObjCount %}
+    <button class="btn btn-mdb-color" type="submit">Zakończ test</button>
+{% else %}
+    <button class="btn btn-elegant" type="submit">Przejdź dalej</button>
+{% endif %}
+
+</form>
+{% endblock %}

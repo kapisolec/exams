@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if  username %}
+    <p class="float-right text-black-50 ">Użytkownik: {{ username }}</p>
+    {% endif %} <br><br>
+
+    <h4>Dziękuję za skorzystanie z mojej aplikacji!</h4>
+    <h5>Aplikacja została stworzona za pomocą Django i Pythona</h5>
+    <h5>Na stronie jest zaimplementowany system logowania</h5>
+    <h5>Strona ta jest także w pełni responsywna, spróbuj zmniejszyć okno przeglądarki!</h5>
+    <h5>Strona graficzna została stworzona za pomocą Bootstrapa, do którego link znajdziesz poniżej:</h5>
+    <a class="hoverable btn btn-primary btn-md active " role="button" aria-pressed="false" href="https://getbootstrap.com/">Zobacz!</a>
+
+{% endblock %}

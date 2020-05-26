@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<p class="float-right text-black-50 ">Użytkownik: {{ username }}</p>
+<br><br>
+    <h5> Twój wynik to: </h5>
+<br>
+<h4>{{ wynik }}</h4>
+
+
+
+{#wynik#}
+<br>
+    <h5>Kliknij poniżej aby wrócić na główną stronę:</h5>
+<a class="btn btn-elegant btn-lg" role="button" aria-pressed="true" href="/">Strona główna</a>
+{% endblock %}

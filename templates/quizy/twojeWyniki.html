@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><h4>Witaj {{ username }}!</h4>
+Twoj ostatni wynik wyniósł: {{ latest }}
+<br><br>
+Historia Twoich wyników:
+<br>
+
+    {% for i in tablicaWynikow %}
+    {{i}} <br>
+    {% endfor %}
+
+<br><br>
+Aby podejść do testu kliknij poniżej: <br>
+    <a class="btn btn-elegant btn-lg" role="button" aria-pressed="true" href="/test/1">Test</a>
+{% endblock %}
